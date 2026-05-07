@@ -1,8 +1,7 @@
 ## Para su prueba parcial
 
 #### Instrucciones para la prueba
-1. Fork al repo.
-2. Clone al repo.
+
 3. Seleccionar un modelo para trabajar.
 4. En el AVA encuentra la llave de conexión.
 5. Construir las operaciones para el modelo.
