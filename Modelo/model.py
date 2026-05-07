@@ -3,8 +3,7 @@ from Enums.DogEnums import StatusEnum
 from datetime import datetime
 from typing import Optional
 
-class Dog(SQLModel, table = True):
-    __tablename__ = "Dogs"
+class Dog(SQLModel):
     name: str
     size: str
     dangerous: bool
@@ -16,6 +15,7 @@ class Dog(SQLModel, table = True):
     )
 
 class DogID(Dog, table=True):
+    __tablename__ = "Dogs"
     id : int | None = Field(default=None, primary_key=True,gt=0)
     status: StatusEnum = Field(default=StatusEnum.active)
 
