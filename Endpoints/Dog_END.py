@@ -14,13 +14,6 @@ async def create_dog(dog: Dog, session: SessionDep):
 async def get_all_dogs(session: SessionDep):
     return show_all_dogs(session)
 
-@router_dogs.get("/", response_model=List[DogID])
-async def get_all_actives(session: SessionDep):
-    return show_all_actived(session)
-
-@router_dogs.get("/deleted", response_model=List[DogID])
-async def get_all_deleted(session: SessionDep):
-    return show_all_deleted(session)
 
 @router_dogs.get("/{id}", response_model=DogID)
 async def get_dog(id: int, session: SessionDep):

@@ -17,7 +17,6 @@ class Dog(SQLModel):
 class DogID(Dog, table=True):
     __tablename__ = "Dogs"
     id : int | None = Field(default=None, primary_key=True,gt=0)
-    status: StatusEnum = Field(default=StatusEnum.active)
 
 class DogUpdate(SQLModel):
     name: Optional[str] = None
