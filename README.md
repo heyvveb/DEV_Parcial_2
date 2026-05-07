@@ -1,9 +1,6 @@
 ## Para su prueba parcial
 
 #### Instrucciones para la prueba
-
-3. Seleccionar un modelo para trabajar.
-4. En el AVA encuentra la llave de conexión.
 5. Construir las operaciones para el modelo.
 6. Cumplimentar los criterios de aceptación.
 7. Realizar los commits incrementales de avance del proyecto.
