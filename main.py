@@ -1,20 +1,11 @@
 from typing import List
 
 from fastapi import FastAPI
-
+from Endpoints.Dog_END import router_dogs
 from db import  SessionDep, create_all_tables
 from sqlmodel import select
 
-app = FastAPI()
+app = FastAPI(lifespan=create_all_tables)
+app.include_router(router_dogs)
 
 
-
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
