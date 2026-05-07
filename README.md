@@ -1,39 +1,8 @@
-## Para su prueba parcial
-
-#### Instrucciones para la prueba
-5. Construir las operaciones para el modelo.
-6. Cumplimentar los criterios de aceptación.
-7. Realizar los commits incrementales de avance del proyecto.
-
-#### Los modelos para el parcial son los siguientes:
-
-### Modelo: Dog
-- **id**: int
-- **name**: str
-- **size**: str
-- **dangerous**: bool
-- **sterilized**: bool
-- **breed**: str
-- **created**: datetime
-
-### Modelo: Book
-- **id**: int
-- **name**: str
-- **author**: str
-- **pages**: int
-- **available**: bool
-- **language**: str
-- **created**: datetime
-
-### Modelo: Sticker
-- **id**: int
-- **name**: str
-- **package**: str
-- **hologram**: bool
-- **obtained**: bool
-- **size**: str
-- **created**: datetime
-
-
-#### Seleccione uno de ellos para constuir su sistema
-
+POST    /Dogs/                = Crear perro
+GET     /Dogs/                = Obtener todos
+GET     /Dogs/actives         = Obtener activos
+GET     /Dogs/deleted         = Obtener eliminados
+GET     /Dogs/{id}            = Obtener uno
+PUT     /Dogs/{id}            = Actualizar
+DELETE  /Dogs/{id}            = Soft delete
+PATCH   /Dogs/{id}/restore    = Restaurar
